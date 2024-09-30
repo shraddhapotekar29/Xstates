@@ -76,17 +76,22 @@ const States=()=>{
         ))}
     </select>
     <select style={{padding:"0.5rem 1rem",width:"10rem",marginRight:"1rem"}} disabled={isDisabled} onChange={(e)=>getCities(e.target.value)}>
-        <option>Select Country</option>
+        <option>Select State</option>
         {states.map((state)=>(<option value={state}>{state}</option>))}
     </select>
     <select style={{padding:"0.5rem 1rem",width:"10rem"}} disabled={isDisabled1} onChange={(e)=>{statementFn(e.target.value)}}>
-        <option>Select Country</option>
+        <option>Select City</option>
         {cities.map((city)=>(<option value={city}>{city}</option>))}
     </select>
     </div>
     {statement && <div>
-        <h3 style={{textAlign:"center"}}>You Selected <span style={{fontSize:"30px"}}>{city}</span>, <span style={{color:"gray"}}>{state},  {countryNm}</span> </h3>
-        </div>}
+        <h3 style={{ textAlign: "center" }}>
+            You selected{" "}
+            <span style={{ fontSize: "30px" }}>{city}</span>,{" "}
+            <span style={{ color: "gray" }}>
+              {state}, {countryNm}
+            </span>
+          </h3> </div>}
     </>)
 }
 export default States;
