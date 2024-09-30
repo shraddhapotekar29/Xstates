@@ -85,7 +85,7 @@ const States=()=>{
     </select>
     </div>
     {statement && <div>
-        <h3>You Selected <span style={{fontSize:"30px"}}>{city}</span>, <span style={{color:"gray"}}>{state},  {countryNm}</span> </h3>
+        <h3 style={{textAlign:"center"}}>You Selected <span style={{fontSize:"30px"}}>{city}</span>, <span style={{color:"gray"}}>{state},  {countryNm}</span> </h3>
         </div>}
     </>)
 }
